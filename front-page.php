@@ -103,19 +103,22 @@ $third = get_field('third');
             </div>
         </div>
     </section>
+<?php
+
+$fourth = get_field('fourth');
+
+?>
+
     <!-- //home page about section -->
     <!-- features-section -->
     <section class="w3l-features py-5" id="work">
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row main-cont-wthree-2 align-items-center">
                 <div class="col-lg-6 feature-grid-left pr-lg-5">
-                    <h5 class="title-subw3hny">How to Protect Yourself?</h5>
-                    <h3 class="title-w3l mb-4">Prevention & advice</h3>
-                    <p class="text-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Fusce eget ex fermentum, ultricies nisi ac sed,
-                        lacinia est. Quisque ut lectus consequat, venenatis eros et, sed commodo risus. Nullam sit
-                        amet laoreet elit. Suspendisse non init magnaa velit efficitur.
-                    </p>
-                    <a href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">Read More</a>
+                    <h5 class="title-subw3hny"><?php  echo $fourth['short_tag']  ?></h5>
+                    <h3 class="title-w3l mb-4"><?php  echo $fourth['main']  ?></h3>
+                    <p class="text-para"><?php  echo $fourth['tag']  ?></p>
+                    <a href="<?php echo $fourth['link_second'];?>" class="btn btn-style btn-primary mt-lg-5 mt-4"><?php  echo $fourth['link_text']  ?></a>
                 </div>
                 <div class="col-lg-6 feature-grid-right mt-lg-0 mt-5 pl-lg-5">
                     <div class="call-grids-w3 d-grid">
@@ -148,6 +151,11 @@ $third = get_field('third');
             </div>
         </div>
     </section>
+<?php
+
+$image = get_field('image_and_des');
+
+?>
     <!-- features section -->
     <!--  services section -->
     <div class="w3l-servicesblock2" id="services">
@@ -170,7 +178,8 @@ $third = get_field('third');
                     </div>
                     <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
                         <div class="grids5-info">
-                            <a href="#service" class="d-block zoom"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/s2.jpg" alt=""
+                        <!-- <?php bloginfo('stylesheet_directory'); ?>/images/s2.jpg -->
+                            <a href="#service" class="d-block zoom"><img src="<?php echo $image['image1'] ?>" alt=""
                                     class="img-fluid" /></a>
                             <div class="blog-info">
                                 <a href="#service" class="title">Wash Your Hands</a>
@@ -181,7 +190,8 @@ $third = get_field('third');
                     </div>
                     <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
                         <div class="grids5-info">
-                            <a href="#service" class="d-block zoom"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/s3.jpg" alt=""
+                        <!-- <?php bloginfo('stylesheet_directory'); ?>/images/s3.jpg -->
+                            <a href="#service" class="d-block zoom"><img src="<?php echo $image['image2'] ?>" alt=""
                                     class="img-fluid" /></a>
                             <div class="blog-info">
                                 <a href="#service" class="title">Avoid Close Contact</a>
