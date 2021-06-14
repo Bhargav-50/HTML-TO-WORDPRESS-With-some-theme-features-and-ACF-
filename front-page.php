@@ -26,6 +26,11 @@ $hero = get_field('hero');
            
         </div>
     </div>
+<?php
+
+$second = get_field('second');
+
+?>
     <!-- hero slider end -->
     <!--/home-stats-->
     <section class="w3l-stats-main py-5">
@@ -35,33 +40,39 @@ $hero = get_field('hero');
                     <div class="icon stat-icon">
                         <i class="fab fa-keycdn"></i>
                     </div>
-                    <p class="counter">1233100</p>
+                    <p class="counter"><?php echo $second['active_cases'];  ?></p>
                     <h4>Active Cases</h4>
                 </div>
                 <div class="col-lg-3 col-6 stats_info counter_grid1 text-left mt-lg-0 mt-5">
                     <div class="icon stat-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <p class="counter">182020</p>
+                    <p class="counter"><?php echo $second['recovered_cases'];  ?></p>
                     <h4>Recovered Cases</h4>
                 </div>
                 <div class="col-lg-3 col-6 stats_info counter_grid text-left mt-lg-0 mt-5">
                     <div class="icon stat-icon">
                         <i class="fas fa-skull-crossbones"></i>
                     </div>
-                    <p class="counter">71912</p>
+                    <p class="counter"><?php echo $second['total_deaths'];  ?></p>
                     <h4>Total Deaths</h4>
                 </div>
                 <div class="col-lg-3 col-6 stats_info counter_grid text-left mt-lg-0 mt-5">
                     <div class="icon stat-icon">
                         <i class="fas fa-crutch"></i>
                     </div>
-                    <p class="counter">11912</p>
+                    <p class="counter"><?php echo $second['vaccination'];  ?></p>
                     <h4>Vaccination</h4>
                 </div>
             </div>
         </div>
     </section>
+<?php
+
+$third = get_field('third');
+
+?>
+
     <!--//home-stats-->
     <!-- home page about section -->
     <section class="w3l-homeblock1" id="about">
@@ -69,16 +80,13 @@ $hero = get_field('hero');
             <div class="container py-lg-5 py-md-3">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <span class="title-subw3hny">About the disease</span>
-                        <h3 class="title-w3l">Coronavirus Disease 
-                            Outbreak Situation</h3>
-                        <p class="mt-md-4 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            ullamco laboris nisi ut ex ea. </p>
+                        <span class="title-subw3hny"><?php echo $third['short_tag'];  ?></span>
+                        <h3 class="title-w3l"><?php echo $third['main'];  ?></h3>
+                        <p class="mt-md-4 mt-3"><?php echo $third['tag'];  ?> </p>
                         <ul class="service-list pt-lg-2 mt-4">
-                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> Avoid touching your face.</a></li>
-                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> Cover your mouth and nose when coughing.</a></li>
-                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> Stay home if you feel unwell.</a></li>
+                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> <?php echo $third['first_point'];  ?></a></li>
+                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> <?php echo $third['second_point'];  ?></a></li>
+                            <li class="service-link"><a href="#url"><span class="fas fa-check"></span> <?php echo $third['third_point'];  ?></a></li>
                         </ul>
                     </div>
                     <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5 pl-lg-5">
